@@ -1,0 +1,18 @@
+You are performing Exploratory Data Analysis on the following dataset profile:
+
+{data_profile}
+
+Based on this profile, reason about:
+1. What is this dataset likely about?
+2. Which columns are most important and why?
+3. Are there any obvious data quality issues?
+4. What statistical patterns or anomalies are visible?
+5. Which columns should be investigated further?
+6. What relationships between columns seem worth exploring?
+
+Return your findings as a structured JSON with keys:
+- "domain": what domain this data belongs to
+- "key_columns": list of most important columns with reason
+- "quality_issues": list of identified data problems
+- "patterns": list of notable statistical observations
+- "next_steps": list of recommended analysis actions

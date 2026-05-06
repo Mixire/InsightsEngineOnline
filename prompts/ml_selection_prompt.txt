@@ -1,0 +1,29 @@
+You are selecting the best machine learning approach for the following scenario:
+
+Dataset Summary: {data_summary}
+User Goal: {user_goal}
+Available Columns: {columns}
+Target Column (if any): {target_column}
+Data Shape: {shape}
+
+Choose from the following ML tasks:
+- "binary_classification" — target has 2 categories
+- "multiclass_classification" — target has 3+ categories
+- "regression" — target is a continuous number
+- "clustering" — no target, find natural groups
+- "time_series_forecasting" — data has a time dimension
+- "anomaly_detection" — find unusual data points
+
+Then choose the best algorithm for that task from:
+Classification: LogisticRegression, RandomForest, XGBoost, LightGBM, SVM
+Regression: LinearRegression, Ridge, RandomForestRegressor, XGBoostRegressor
+Clustering: KMeans, DBSCAN, AgglomerativeClustering
+Forecasting: Prophet, ARIMA, ExponentialSmoothing
+Anomaly: IsolationForest, LocalOutlierFactor
+
+Return ONLY a JSON with keys:
+- "task": the selected ML task
+- "algorithm": the selected algorithm class name
+- "reason": 2-sentence explanation of why
+- "target_column": the column to predict (or null for unsupervised)
+- "feature_columns": list of columns to use as features

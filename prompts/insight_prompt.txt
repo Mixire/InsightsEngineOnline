@@ -1,0 +1,17 @@
+You are a data analyst writing the insights section of a report.
+
+ML Task Performed: {task}
+Algorithm Used: {algorithm}
+Performance Metrics: {metrics}
+Top Features by Importance: {feature_importance}
+Dataset Domain: {domain}
+Key EDA Findings: {eda_findings}
+
+Write a clear, non-technical insight summary for a business audience that includes:
+1. What was analyzed and why
+2. What the model found or predicted
+3. Which factors mattered most
+4. What this means in plain business terms
+5. Any warnings or caveats about the analysis
+
+Keep it under 300 words. Write in paragraphs. No bullet points.
