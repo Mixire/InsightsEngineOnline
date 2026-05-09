@@ -40,6 +40,20 @@ with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/2103/2103633.png", width=100)
     st.title("Settings")
     st.info(f"Model: {LLM_MODEL}")
+    
+    if st.button("🔍 List Available Models"):
+        if not os.getenv("GEMINI_API_KEY"):
+            st.error("API Key not found.")
+        else:
+            try:
+                import google.generativeai as genai
+                genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+                models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
+                st.write("Available models:")
+                st.json(models)
+            except Exception as e:
+                st.error(f"Error listing models: {e}")
+
     st.divider()
     st.markdown("### About")
     st.caption("InsightsEngine v1.0 is an autonomous data science platform powered by Google Gemini.")
