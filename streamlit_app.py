@@ -45,6 +45,7 @@ with st.sidebar:
 
 # Main Header
 st.title("📊 InsightsEngine v1.0")
+st.caption(f"Active Model: {LLM_MODEL}")
 st.subheader("Next-Generation Automated Data Analysis")
 st.write("Upload a dataset and define your goal. The AI will handle cleaning, EDA, modeling, and reporting.")
 

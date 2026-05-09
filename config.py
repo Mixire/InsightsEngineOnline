@@ -5,7 +5,7 @@ load_dotenv()
 
 # Cloud LLM Config (Google Gemini)
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-LLM_MODEL = "gemini-1.5-flash-latest"  # Flash is faster and better for hosting
+LLM_MODEL = "gemini-1.5-pro-latest"  # Pro is more robust for complex reasoning
 MAX_TOKENS = 4096
 
 # Agent Config
