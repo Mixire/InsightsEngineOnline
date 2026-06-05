@@ -80,4 +80,4 @@ analytics_agent/
 ```
 
 ## 📜 License
-MIT License. Created by [Your Name].
+MIT License. Created by Mrinal Saha.
